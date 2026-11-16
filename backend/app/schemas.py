@@ -13,6 +13,7 @@ class PageResult(BaseModel, Generic[T]):
     total: int
     page: int = 1
     size: int = 20
+    extra: dict[str, Any] = Field(default_factory=dict)
 
 
 class ActionResult(BaseModel):
